@@ -1,0 +1,300 @@
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #2b2b2b;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ff7a00;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff7a00;
+}
+
+.btn-nav {
+    border: 1px solid #ff7a00;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+/* ================= HERO ================= */
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+
+.hero-left {
+    width: 50%;
+    background: #3a3a3a;
+    padding: 80px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+.hero-left::before {
+    content: "";
+    position: absolute;
+    left: -250px;
+    top: -200px;
+    width: 600px;
+    height: 600px;
+    background: url('images/your-image.jpg') center/cover no-repeat;
+    border-radius: 50%;
+    filter: grayscale(100%) brightness(30%);
+    z-index: 1;
+}
+
+.hero-left > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Arrow Line Before "We" */
+
+.small-title {
+    position: relative;
+    padding-left: 50px;
+    color: #ff7a00;
+}
+
+.small-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 35px;
+    height: 2px;
+    background: #ff7a00;
+    transform: translateY(-50%);
+}
+
+/* MAIN HEADING */
+
+.hero-left h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.outline-box {
+    border: 2px solid white;
+    padding: 5px 12px;
+}
+
+/* RIGHT SIDE IMAGE */
+
+.hero-right {
+    width: 50%;
+    background: url('images/bg.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+/* Orange Overlay */
+
+.hero-right::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -250px;
+    width: 700px;
+    height: 700px;
+    background: url('images/your-image.jpg') center/cover no-repeat;
+    border-radius: 50%;
+    filter: grayscale(100%) brightness(40%);
+}
+/* BIG DARK CURVE TOP RIGHT */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: #ca6023;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* ORANGE BOTTOM CURVE */
+
+.hero-right::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: #ff7a00;
+    border-radius: 50%;
+}
+
+/* PROFILE CIRCLE */
+
+.profile-circle {
+    position: absolute;
+    bottom: 20px;
+    left: 58%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.profile-circle img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 0 0 8px rgba(255,255,255,0.2);
+}/* ================= SECTIONS ================= */
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    color: #ff7a00;
+    margin-bottom: 20px;
+}
+
+.dark-section {
+    background: #1f1f1f;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.skills-container ul {
+    list-style: none;
+}
+
+/* ================= PROJECTS ================= */
+
+.project-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* ================= EDUCATION ================= */
+
+.education-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* ================= CONTACT ================= */
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background: #ff7a00;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e66d00;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero::before {
+        width: 500px;
+        height: 500px;
+        right: -200px;
+        top: -200px;
+    }
+
+    .hero-image img {
+        width: 240px;
+        margin-top: 30px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
