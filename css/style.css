@@ -43,11 +43,6 @@ body {
     text-decoration: none;
     color: white;
     font-size: 15px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ff7a00;
 }
 
 .btn-nav {
@@ -57,44 +52,28 @@ body {
 }
 
 /* ================= HERO ================= */
-/* ================= HERO ================= */
 
+/* HERO SECTION WITH FULL BACKGROUND IMAGE */
 .hero {
     position: relative;
     display: flex;
-    height: 500px;
+    height: 550px;
     overflow: hidden;
-}
 
+    /* Full background image for the hero section */
+    background-image: url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 /* LEFT SIDE */
 
 .hero-left {
     width: 50%;
     background: #3a3a3a;
-    padding: 80px;
-    color: white;
-    position: relative;
+    padding: 100px 80px;
     z-index: 2;
 }
-.hero-left::before {
-    content: "";
-    position: absolute;
-    left: -250px;
-    top: -200px;
-    width: 600px;
-    height: 600px;
-    background: url('images/your-image.jpg') center/cover no-repeat;
-    border-radius: 50%;
-    filter: grayscale(100%) brightness(30%);
-    z-index: 1;
-}
-
-.hero-left > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Arrow Line Before "We" */
 
 .small-title {
     position: relative;
@@ -113,10 +92,8 @@ body {
     transform: translateY(-50%);
 }
 
-/* MAIN HEADING */
-
 .hero-left h1 {
-    font-size: 36px;
+    font-size: 42px;
     margin: 20px 0;
 }
 
@@ -124,177 +101,222 @@ body {
     border: 2px solid white;
     padding: 5px 12px;
 }
+.hero-left {
+    width: 50%;
+    padding: 100px 80px;
+    z-index: 2;
+    /* no background here */
+}
 
-/* RIGHT SIDE IMAGE */
-
+/* RIGHT SIDE */
 .hero-right {
     width: 50%;
-    background: url('images/bg.jpg') center/cover no-repeat;
     position: relative;
+    /* no background here */
 }
 
-/* Orange Overlay */
-
-.hero-right::before {
-    content: "";
-    position: absolute;
-    top: -200px;
-    right: -250px;
-    width: 700px;
-    height: 700px;
-    background: url('images/your-image.jpg') center/cover no-repeat;
-    border-radius: 50%;
-    filter: grayscale(100%) brightness(40%);
-}
-/* BIG DARK CURVE TOP RIGHT */
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top: -200px;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    background: #ca6023;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-/* ORANGE BOTTOM CURVE */
-
-.hero-right::after {
-    content: "";
-    position: absolute;
-    bottom: -150px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
+.btn-primary {
+    display: inline-block;
+    padding: 10px 22px;
     background: #ff7a00;
-    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-/* PROFILE CIRCLE */
+/* RIGHT SIDE BACKGROUND */
 
+
+/* BIG ORANGE CURVE */
+/* ================= HERO ================= */
+
+/* BIG ORANGE CURVE (smaller) */
+/* BIG ORANGE CURVE (smaller) */
+
+
+/* PROFILE IMAGE CIRCLE WITH BACKGROUND */
+/* PROFILE IMAGE CIRCLE WITH BACKGROUND */
+/* PROFILE IMAGE CIRCLE WITH BACKGROUND */
+/* PROFILE SQUARE */
 .profile-circle {
     position: absolute;
-    bottom: 20px;
-    left: 58%;
+    bottom: 140px;       /* slightly above */
+    left: 75%;           /* slightly to the right */
     transform: translateX(-50%);
     z-index: 3;
+    width: 270px;        /* square container width */
+    height: 270px;       /* square container height */
+    border-radius: 0;    /* remove circle */
+    background: url('../images/profile-bg.jpg') no-repeat center center; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-circle img {
-    width: 200px;
-    height: 200px;
+    width: 220px;        /* image width */
+    height: 220px;       /* image height */
     object-fit: cover;
-    border-radius: 50%;
-    border: 8px solid white;
-    box-shadow: 0 0 0 8px rgba(255,255,255,0.2);
-}/* ================= SECTIONS ================= */
-
-.section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.section-title {
-    color: #ff7a00;
-    margin-bottom: 20px;
-}
-
-.dark-section {
-    background: #1f1f1f;
-}
-
-/* ================= SKILLS ================= */
-
-.skills-container {
+    border-radius: 0;    /* make image square */
+    border: 5px solid white;
+}/* HERO TEXT INSIDE CARD */
+.hero-left-card {
+    width: 60%;
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    position: relative;
+    padding: 50px;
 }
 
-.skills-container ul {
-    list-style: none;
+.hero-card {
+    background: rgba(112, 75, 50, 0.6); /* semi-transparent black */
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
+.hero-card h1 {
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.hero-card .outline-box {
+    border: 2px solid white;
+    padding: 5px 12px;
+}
+
+.hero-card p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero-card .btn-primary {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #ff7a00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.section { padding: 80px 0; text-align: center; } .section-title { color: #ff7a00; margin-bottom: 20px; } .dark-section { background: #1f1f1f; }  
+/* ================= PROJECTS ================= */
 
 /* ================= PROJECTS ================= */
+
+.projects-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
 
 .project-card {
     background: white;
     color: black;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 400px;
-    border-radius: 10px;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    text-align: left;
 }
 
+.project-card:hover {
+    transform: translateY(-8px);
+} /* ================= EDUCATION ================= */
+ /* ================= EDUCATION ================= */
 /* ================= EDUCATION ================= */
+
+.education-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
 
 .education-card {
     background: white;
     color: black;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    text-align: left;
 }
 
-/* ================= CONTACT ================= */
-
-form {
-    margin-top: 20px;
+.education-card:hover {
+    transform: translateY(-8px);
+}/* ================= CONTACT ================= */ 
+     form { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin-left: auto; margin-right: auto; } input, textarea { padding: 10px; border: none; border-radius: 5px; } form button { padding: 10px; border: none; background: #ff7a00; color: white; border-radius: 5px; cursor: pointer; } form button:hover { background: #e66d00; }
+     /* ================= PROJECTS ================= */
+/* Fix Projects Layout */
+#projects .container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;   /* stack heading + cards */
+    align-items: center;      /* center everything */
 }
 
-input,
-textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+#projects .section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-form button {
-    padding: 10px;
-    border: none;
-    background: #ff7a00;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+/* Wrap project cards in row */
+#projects .project-card {
+    margin: 0;
 }
 
-form button:hover {
-    background: #e66d00;
+#projects .container {
+    gap: 40px;
 }
 
-/* ================= RESPONSIVE ================= */
+#projects .container > .project-card-wrapper {
+    display: flex;
+}/* ================= SKILLS ================= */
 
-@media (max-width: 900px) {
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
 
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
+.skills-container > div {
+    background: white;
+    color: black;
+    padding: 30px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
 
-    .hero::before {
-        width: 500px;
-        height: 500px;
-        right: -200px;
-        top: -200px;
-    }
+.skills-container > div:hover {
+    transform: translateY(-8px);
+}
 
-    .hero-image img {
-        width: 240px;
-        margin-top: 30px;
-    }
+.skills-container h3 {
+    margin-bottom: 15px;
+    color: #ff7a00;
+}
 
-    .skills-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+.skills-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-container li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
 }
